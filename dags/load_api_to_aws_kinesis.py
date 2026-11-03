@@ -63,7 +63,7 @@ def _process_user_posts(new_api_user_id=1, **context):
 
 
     
-with DAG(dag_id='load_api_aws_kinesis', default_args={'owner': 'Sovan'}, tags=["api data load to s3"], start_date=datetime(2023,9,24), schedule='@daily', catchup=False):
+with DAG(dag_id='load_api_aws_kinesis', default_args={'owner': 'rickyrick74'}, tags=["api data load to s3"], start_date=datetime(2023,9,24), schedule='@daily', catchup=False):
 
     get_api_userId_params = PythonOperator(
         task_id = 'get_api_userId_params',
